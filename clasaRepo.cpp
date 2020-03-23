@@ -171,7 +171,7 @@ void Repo::afisareEgalCu(int suma) {
 }
 void Repo::listeazaSold(int zi) {
 	cout << "Afisare sold pentru ziua " << zi << endl;
-	int sold = 0;
+	int sold = 700;
 	for (int i = 0; i < this->size; i++) {
 		Tranzactie t = this->listaTranzactii[i];
 		if (t.getTip() == In && t.getZiua() == zi) {

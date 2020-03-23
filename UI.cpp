@@ -19,23 +19,23 @@ UI::~UI()
 }
 
 void UI::printMeniu() {
-	cout << "--------------------------------------------" << endl;
+	cout << "John-aplicatie pentru gestionarea conturilor bancare" << endl;
 
+	cout << "1. Adauga o tranzactie (descriere,zi,suma,tip)" << endl;
+	cout << "2. Afiseaza tranzactiile mele (suma,zi,tip,descriere)" << endl;
+	cout << "3. Inlocuire tranzactie de pe pozitia x" << endl;
+	cout << "4. Afiseaza tranzactiile dupa tip (in/out) " << endl;
+	cout << "5. Afiseaza tranzactiile cu suma mai mare ca y" << endl;
+	cout << "6. Afiseaza tranzactiile cu suma egala cu z" << endl;
+	cout << "7. Afiseaza suma totala a tranzactiilor de tipul in/out" << endl;
+	cout << "8. Afiseaza tranzactia maxima de tipul (in/out) din ziua aa" << endl;
+	cout << "9. Afiseaza sold pentru ziua aa" << endl;
+	cout << "10. Elimin tranzactiile din ziua aa" << endl;
+	cout << "11. Elimin tranzactiile din intervalul I[zi inceput,zi sfarsit]" << endl;
+	cout << "12. Elimin tranzactiile de tipul in/out" << endl;
+	cout << "13. Filtreaza tranzactiile in functie de tip (in/out) si suma s" << endl;
 	cout << "0. IESIRE" << endl;
-	cout << "1. Adauga tranzactie" << endl;
-	cout << "2. Inlocuire tranzactie de pe pozitia..." << endl;
-	cout << "3. Afisare tranzactii " << endl;
-	cout << "4. Afisare tranzactii dupa tip " << endl;
-	cout << "5. Afisare tranzactii cu suma mai mare ca..." << endl;
-	cout << "6. Afisare tranzactii cu suma egala cu..." << endl;
-	cout << "7. Afisare sold pentru ziua..." << endl;
-	cout << "8. Eliminare tranzactii din ziua..." << endl;
-	cout << "9. Eliminare tranzactii din intervalul..." << endl;
-	cout << "10. Eliminare tranzactii de tipul..." << endl;
-	cout << "11. Afisare suma totala a tranzactiilor de tipul..." << endl;
-	cout << "12. Afisare tranzactie maxima de tipul... din ziua..." << endl;
-	cout << "13. Filtreaza tranzactiile in functie de tip si suma" << endl;
-	cout << "--------------------------------------------" << endl;
+
 
 }
 void UI::run() {
@@ -52,12 +52,12 @@ void UI::run() {
 		}
 		case 2:
 		{
-			updateTranzactie();
+			afisareTranzactii(); 
 			break;
 		}
 		case 3:
 		{
-			afisareTranzactii();
+			updateTranzactie();
 			break;
 		}
 		case 4:
@@ -77,34 +77,37 @@ void UI::run() {
 		}
 		case 7:
 		{
-			listeazaSold();
+			sumaTotala();
 			break;
 		}
-		case 8:
+		case 8: 
 		{
-			eliminareDupaZi();
+			maximZi();
 			break;
 		}
 		case 9:
 		{
-			eliminareIntervalZi();
+			listeazaSold();
 			break;
 		}
 		case 10:
 		{
-			eliminareTip();
+			eliminareDupaZi();
 			break;
 		}
 		case 11:
 		{
-			sumaTotala();
+			eliminareIntervalZi();
 			break;
 		}
-		case 12: {
-			maximZi();
+		case 12:
+		{
+			eliminareTip();
 			break;
 		}
-		case 13: {
+		
+		case 13: 
+		{
 			filtruTipMaiMicDecat();
 			break;
 		}
